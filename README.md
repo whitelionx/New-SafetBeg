@@ -1,5 +1,5 @@
 # New-SafetBeg
-I need to re-do this static HTML site in React for easier maintainability in the future.
+I need to re-do this static HTML site in React for easier maintainability.
 
 ## Rules
 The only rule here is to make sure that the site has the same cotent and look (CSS is not to be changed) after the rework.
