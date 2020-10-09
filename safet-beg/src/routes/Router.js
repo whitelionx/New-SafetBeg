@@ -11,15 +11,12 @@ const Router = () => {
 
   const transitions = useTransition(location, (location) => location.pathname, {
     from: {
-      transform: "translate3d(-100%, 0, 0)",
       opacity: 0,
     },
     enter: {
-      transform: "translate3d(0%, 0, 0)",
       opacity: 1,
     },
     leave: {
-      transform: "translate3d(100%, 0, 0)",
       opacity: 0,
     },
   });
