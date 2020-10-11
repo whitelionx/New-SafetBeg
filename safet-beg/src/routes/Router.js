@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { Switch, Route, BrowserRouter, useLocation } from "react-router-dom";
+import React from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
-import Navigation from "../components/Navigation";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -21,24 +20,17 @@ const Router = () => {
     },
   });
 
-  useEffect(() => {
-    console.log(location);
-  });
-
   return transitions.map(({ item, props, key }) => (
     <animated.div
       style={{
         ...props,
-        position: "absolute",
-        height: "100%",
-        width: "100%",
       }}
       key={key}
     >
       <Switch location={item}>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </Switch>
     </animated.div>
   ));
