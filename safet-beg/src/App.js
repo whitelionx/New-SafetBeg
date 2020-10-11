@@ -1,18 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Router from "./routes/Router";
 import { BrowserRouter } from "react-router-dom";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/footer/Footer";
+import StickyPanels from "./components/sticky-panels/StickyPanels";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <StickyPanels />
       <BrowserRouter>
         <Navigation />
         <Router />
+        <Footer />
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
