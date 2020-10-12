@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <h1>@SafetBeg</h1>
-      <span>SafetBeg © 2018</span>
+      <span>SafetBeg © {new Date().getUTCFullYear()}</span>
     </footer>
   );
 };
