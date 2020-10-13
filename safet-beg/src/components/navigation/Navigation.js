@@ -17,6 +17,10 @@ const useStyles = makeStyles({
   fullList: {
     width: "auto",
   },
+  link: {
+    color: "#000",
+    textDecoration: "none",
+  },
 });
 
 const Navigation = () => {
@@ -46,11 +50,11 @@ const Navigation = () => {
               { title: "About", route: "/about" },
               { title: "Contact", route: "/contact" },
             ].map(({ title, route }) => (
-              <ListItem button key={title}>
-                <Link to={route}>
+              <Link to={route} className={classes.link}>
+                <ListItem button key={title}>
                   <ListItemText primary={title} />
-                </Link>
-              </ListItem>
+                </ListItem>
+              </Link>
             ))}
           </List>
         </div>
